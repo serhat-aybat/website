@@ -6,6 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
 <title></title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
 </head>
 <body>
 <table summary="Table for page layout." id="tlayout">
@@ -20,32 +29,62 @@
 <div class="menu-item"><a href="mailto:nsa10@psu.edu">Contact</a></div>
 </td>
 <td id="layout-content">
-<h1>Alternating Direction Method with Increasing Penalty for Clustering (ADMIPC)</h1>
-<p>ADMIPC is an ADMM algorithm with increasing penalty for detecting non-overlapping communities in a partially observed undirected graphs. For details of the ADMIPC, refer to the <a href="http://arxiv.org/abs/1410.3898"><b>paper</b></a>.</p>
-<p><a href="./ADMIPC.zip"><b>Download ADMIPC v1</b></a></p>
-<h1>First-order Augmented Lagrangian (FAL) Algorithm</h1>
-<p>FAL is a first-order algorithm to solve Basis Pursuit (BP) problem:</p>
-<table class="imgtable"><tr><td>
-<img src="BP.png" alt="BP" width="361px" height="66px" />&nbsp;</td>
-<td align="left"></td></tr></table>
-<p><a href="./FAL_v1.zip"><b>Download FAL v1</b></a></p>
-<p>The README file describes the setup and the details of the code. For more details, refer to the <a href="http://arxiv.org/abs/1005.5582"><b>paper</b></a>.</p>
-<h1>Partially Smooth Proximal Gradient (PSPG) Algorithm</h1>
-<p>PSPG is a first-order algorithm to solve Stable Principal Component Pursuit (SPCP) problem:</p>
-<table class="imgtable"><tr><td>
-<img src="SPCP.png" alt="SPCP" width="500px" height="54px" />&nbsp;</td>
-<td align="left"></td></tr></table>
-<p>The first term in the objective function is equal to the sum of singular values of X and the second term is equal to sum of absolute values of all the components of S. Smooting one of the terms in the objective function, it achieves O(1/e) iteration complexity.</p>
-<p><a href="./PSPG_v1.zip"><b>Download PSPG v1</b></a></p>
-<p>The README file describes the setup and the details of the code. For details of the PSPG, refer to the <a href="http://arxiv.org/abs/1309.6976"><b>paper</b></a>.</p>
-<h1>Alternating Direction Method with Increasing Penalty (ADMIP)</h1>
-<p>ADMIP is an ADMM algorithm with increasing penalty to solve Stable Principal Component Pursuit (SPCP) problem. For details of the ADMIP, refer to the <a href="http://arxiv.org/abs/1309.6553"><b>paper</b></a>.</p>
-<p>Note: In an earlier <a href="http://arxiv.org/abs/1105.2126"><b>preprint</b></a>, we named it as Non-Smooth Augmented (NSA) algorithm. </p>
-<p><a href="./NSA_v1.zip"><b>Download NSA v1</b></a></p>
-<p>The README file describes the setup and the details of the code</p>
+<p>
+</p>
+<h1>Alternating Direction Method with Increasing Penalty for Clustering (ADMIPC)</h1>
+<p>
+ADMIPC is an ADMM algorithm with increasing penalty for detecting non-overlapping communities in a partially observed undirected graphs. For details of the ADMIPC, refer to the <a href="http://arxiv.org/abs/1410.3898" target=&ldquo;blank&rdquo;><b>paper</b></a>.
+
+<a href="./ADMIPC.zip" target=&ldquo;blank&rdquo;><b>Download ADMIPC v1</b></a>
+
+</p>
+<h1>First-order Augmented Lagrangian (FAL) Algorithm</h1>
+<p>
+FAL is a first-order algorithm to solve Basis Pursuit (BP) problem:
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p style="text-align:center">
+\[\large
+\min_{x\in\mathbb{R}^n}\{\|x\|_1:\ \|Ax-b\|_2\leq\delta\}.
+\]
+</p></div></div>
+<p>
+<a href="./FAL_v1.zip" target=&ldquo;blank&rdquo;><b>Download FAL v1</b></a>
+
+The README file describes the setup and the details of the code. For more details, refer to the <a href="http://arxiv.org/abs/1005.5582" target=&ldquo;blank&rdquo;><b>paper</b></a>.
+
+</p>
+<h1>Partially Smooth Proximal Gradient (PSPG) Algorithm</h1>
+<p>
+PSPG is a first-order algorithm to solve Stable Principal Component Pursuit (SPCP) problem:
+</p>
+<div class="infoblock">
+<div class="blockcontent">
+<p style="text-align:center">
+\[\large
+\min_{X,S\in\mathbb{R}^{m\times n}}\{\|X\|_*+\xi\|S\|_1:\ \|X+S-D\|_F\leq\delta\}.
+\]
+</p></div></div>
+<p>The first term in the objective function is equal to the sum of singular values of \(X\) and the second term is equal to sum of absolute values of all the components of \(S\). Smooting one of the terms in the objective function, it achieves \(\mathcal{O}(1/\epsilon)\) iteration complexity.
+
+<a href="./PSPG_v1.zip" target=&ldquo;blank&rdquo;><b>Download PSPG v1</b></a>
+
+The README file describes the setup and the details of the code. For details of the PSPG, refer to the <a href="http://arxiv.org/abs/1309.6976" target=&ldquo;blank&rdquo;><b>paper</b></a>.
+
+</p>
+<h1>Alternating Direction Method with Increasing Penalty (ADMIP)</h1>
+<p>
+ADMIP is an ADMM algorithm with increasing penalty to solve Stable Principal Component Pursuit (SPCP) problem. For details of the ADMIP, refer to the <a href="http://arxiv.org/abs/1309.6553" target=&ldquo;blank&rdquo;><b>paper</b></a>.
+
+Note: In an earlier <a href="http://arxiv.org/abs/1105.2126" target=&ldquo;blank&rdquo;><b>preprint</b></a>, we named it as Non-Smooth Augmented (NSA) algorithm. 
+
+<a href="./NSA_v1.zip" target=&ldquo;blank&rdquo;><b>Download NSA v1</b></a>
+
+The README file describes the setup and the details of the code.</p>
 <div id="footer">
 <div id="footer-text">
-Page generated 2023-02-08 23:58:44 Eastern Standard Time, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+Page generated 2024-08-31 21:34:39 EDT, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
 </div>
 </div>
 </td>
